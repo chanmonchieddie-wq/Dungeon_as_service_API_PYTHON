@@ -1,0 +1,61 @@
+{
+  "start_room": "entree",
+  "final_room": "salle_trone",
+  "rooms": {
+    "entree": {
+      "name": "Entrée du donjon",
+      "description": "Une lourde porte de chêne se referme derrière vous. L'air sent la pierre humide.",
+      "exits": { "nord": "hall" },
+      "monster": null
+    },
+    "hall": {
+      "name": "Grand hall effondré",
+      "description": "Des piliers brisés jonchent le sol. Trois passages s'enfoncent dans l'obscurité.",
+      "exits": { "sud": "entree", "nord": "couloir", "est": "crypte", "ouest": "bibliotheque" },
+      "monster": null
+    },
+    "bibliotheque": {
+      "name": "Bibliothèque oubliée",
+      "description": "Des grimoires moisis s'empilent jusqu'au plafond. Quelque chose ricane entre les étagères.",
+      "exits": { "est": "hall" },
+      "monster": "gobelin"
+    },
+    "crypte": {
+      "name": "Crypte des anciens",
+      "description": "Des cercueils ouverts bordent la salle. L'un d'eux est vide... et des os claquent derrière vous.",
+      "exits": { "ouest": "hall" },
+      "monster": "squelette"
+    },
+    "couloir": {
+      "name": "Couloir des murmures",
+      "description": "Un couloir étroit où les murs semblent chuchoter votre nom. Des yeux rouges brillent au sol.",
+      "exits": { "sud": "hall", "nord": "antichambre" },
+      "monster": "rat_geant"
+    },
+    "antichambre": {
+      "name": "Antichambre du trône",
+      "description": "Une immense silhouette garde une double porte gravée de runes.",
+      "exits": { "sud": "couloir", "nord": "salle_trone", "est": "source" },
+      "monster": "ogre"
+    },
+    "source": {
+      "name": "Source sacrée",
+      "description": "Une eau claire coule d'une fontaine de marbre. C'est le seul endroit calme du donjon.",
+      "exits": { "ouest": "antichambre" },
+      "monster": null
+    },
+    "salle_trone": {
+      "name": "Salle du trône",
+      "description": "Sur un trône d'ossements, la Liche relève lentement la tête. Ses orbites s'illuminent.",
+      "exits": { "sud": "antichambre" },
+      "monster": "liche"
+    }
+  },
+  "monsters": {
+    "rat_geant": { "name": "Rat géant", "hp": 8, "attack": 2, "gold": 5 },
+    "gobelin": { "name": "Gobelin", "hp": 12, "attack": 3, "gold": 10 },
+    "squelette": { "name": "Squelette", "hp": 15, "attack": 4, "gold": 15 },
+    "ogre": { "name": "Ogre", "hp": 30, "attack": 6, "gold": 40 },
+    "liche": { "name": "La Liche", "hp": 50, "attack": 7, "gold": 100 }
+  }
+}
